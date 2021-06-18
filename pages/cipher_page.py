@@ -31,7 +31,26 @@ def get_head():
 
 
 def get_body():
-    return body(None, div_container(div('style="margin-top: 25%"', [get_encipher_div(), get_decipher_div()])))
+    return body(
+        None,
+        div_container(
+            div(
+                'style="margin-top: 25%"',
+                [
+                    get_encipher_div(),
+                    get_decipher_div(),
+                    get_credit_div()])))
+
+
+def get_credit_div():
+    return div(
+        None,
+        [
+            "Icon by ",
+            a('href="https://www.freepik.com" title="Freepik"', 'Freepik'),
+            " from ",
+            a('href="https://www.flaticon.com/" title="Flaticon"', 'www.flaticon.com'),
+        ])
 
 
 def get_encipher_div():
